@@ -1,0 +1,8 @@
+# Steps 
+https://update.angular.io/
+
+
+
+
+npm install--save-dev @angular/cli@latest
+npm install--save @angular/cli
