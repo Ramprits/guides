@@ -1,0 +1,70 @@
+Create Typescript generic function 
+
+Steps to follow create Generic Typescript function.
+1=>
+
+
+import { Observable } from "../../../node_modules/rxjs";
+
+export interface CrudOperations<T, ID> {
+	save(t: T): Observable<T>;
+	update(id: ID, t: T): Observable<T>;
+	findOne(id: ID): Observable<T>;
+	findAll(): Observable<T[]>;
+	delete(id: ID): Observable<any>;
+}
+
+2=>
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { CrudOperations } from "./crud-operations.interface";
+
+export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {
+  constructor(private http: HttpClient) {}
+  save(t: T): Observable<T> {
+    throw new Error("Method not implemented.");
+  }
+  update(id: ID, t: T): Observable<T> {
+    throw new Error("Method not implemented.");
+  }
+  findOne(id: ID): Observable<T> {
+    throw new Error("Method not implemented.");
+  }
+  findAll(): Observable<T[]> {
+    return this.http.get<T[]>(`https://jsonplaceholder.typicode.com/posts`);
+  }
+  delete(id: ID): Observable<any> {
+    throw new Error("Method not implemented.");
+  }
+}
+
+3=>
+
+import { Injectable } from "@angular/core";
+import { Post } from "../post/IPost";
+import { CrudService } from "./CrudService";
+import { HttpClient } from "../../../node_modules/@angular/common/http";
+
+@Injectable({
+  providedIn: "root"
+})
+export class NewPostService extends CrudService<Post, number> {
+  constructor(http: HttpClient) {
+    super(http);
+  }
+  
+}
+
+
+4=>
+PostComponent you need to inject =>
+
+ public newPostService: NewPostService
+ 
+  getNewPosts() {
+    this.newPostService.findAll().subscribe(data => {
+      this.newPosts = data;
+    });
+  }
+  
+  
