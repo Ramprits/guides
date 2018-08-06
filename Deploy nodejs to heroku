@@ -1,0 +1,14 @@
+Hello,
+Deploy Nodejs application on heroku.
+
+Steps to follow.
+
+First check heroku CLI installed on your system on not if not then visit : https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+heroku --version
+
+1: heroku create
+
+2: git add .
+3: git commit -m "Deploy app" make sure your changes are stage.
+4:git push heroku master
+5:heroku open
