@@ -1,0 +1,14 @@
+# Angular 6 install Lodash and moment js.
+
+Steps to follow ==>
+
+npm install --save lodash
+npm install --save-dev @types/lodash
+
+npm install --save moment
+npm install --save-dev @types/moment
+
+usefull resource link 
+
+
+https://medium.com/@coco.boudard/install-lodash-with-angular-4-only-to-get-rid-of-it-eebe5869e784
