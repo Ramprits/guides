@@ -1,0 +1,11 @@
+
+visual studio code change terminal code by adding this code in your vs code setting.json file 
+
+
+
+ "workbench.colorCustomizations": {
+    "terminal.foreground": "#00FD61",
+    "terminal.background": "#383737"
+  }
+  
+  
