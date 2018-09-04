@@ -8,3 +8,6 @@ Full documentation of npm
 
 https://docs.npmjs.com/
 
+Check globle npm installed in system
+npm list -g --depth 0
+
