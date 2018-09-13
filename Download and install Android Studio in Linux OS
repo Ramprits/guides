@@ -19,3 +19,6 @@ sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 
 
 https://www.youtube.com/watch?v=axtVId9ASmY
+
+https://askubuntu.com/questions/342202/failed-to-load-module-canberra-gtk-module-but-already-installed
+
