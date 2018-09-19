@@ -1,6 +1,8 @@
 Open git hub source code in directaly stackblitz by simplay 
 1: https://stackblitz.com/github
 
+remove other repository 
+git remote rm origion
 
 https://blog.angular.io/run-angular-cli-repos-directly-in-your-browser-41332fd80901
 
