@@ -1,0 +1,38 @@
+How to install uTorrent from ubuntu 14.04 / 15.04 / 16.04
+
+1) Open the Terminal  by pressing (Ctrl + Alt + T )
+2) Run the below codes in the terminal to Install libssl.
+sudo apt-get update
+Enter the password
+sudo apt-get install libssl1.0.0 libssl-dev
+3) Now download uTorrent software Click here to download
+4) Since the downloaded file is in downloads folder.Type the following in terminal  
+cd Downloads/
+5) Use the following command to copy the file to opt directory
+sudo cp utserver.tar.gz /opt/
+6) Run the below command to move to the opt directory 
+cd /opt/
+Now extract the tar file by typing the below code
+sudo tar -xvf utserver.tar.gz
+7)Now delete the extracted  tar file  
+sudo rm -rf utserver.tar.gz
+8) Run the following command to extract the downloaded file to /opt directory
+sudo tar -zxvf utserver.tar.gz -C /opt/
+9) Now give permission to extracted directory to run uTorrent-server
+sudo chmod -R 777 /opt/utorrent-server-alpha-v3_3/
+10) Now link uTorrent server to the /user/bin directory
+sudo ln -s /opt/utorrent-server-alpha-v3_3/utserver /usr/bin/utserver
+11) Start uTorrent
+utserver -settingspath /opt/utorrent-server-alpha-v3_3/
+12) Open Your Browser [chrome /firefox] type the below command
+localhost:8080/gui
+13) A popup will be shown enter
+Username = admin
+Password field should be blank
+
+For more info:-  http://goo.gl/2su5an
+
+
+
+download utorrents 
+https://www.utorrent.com/downloads/linux
