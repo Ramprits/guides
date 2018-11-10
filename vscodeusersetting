@@ -1,0 +1,38 @@
+{
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "git.enableSmartCommit": true,
+  "terminal.integrated.rendererType": "dom",
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/*.spec.ts": true
+  },
+  "editor.fontSize": 18,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.fontWeightBold": "normal",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.codeLens": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Visual Studio Dark",
+  "files.watcherExclude": {
+    "\"**/node_modules/*/**\": true": true
+  },
+  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.shell.windows": "cmd.exe",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  }
+}
