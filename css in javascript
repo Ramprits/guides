@@ -1,0 +1,17 @@
+How to setup react application css in javascript.
+
+You need to run this command from your application root directory 
+
+
+npm run eject
+
+then it will generate script and config folder in your application go to config folder and open dev file 
+find this function use: getStyleLoaders(
+
+
+ use: getStyleLoaders({
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]'
+            }),
+            
