@@ -1,0 +1,6 @@
+EF core migration from Data to Api
+
+
+dotnet ef migrations  --startup-project "..\Core" add initial
+
+
