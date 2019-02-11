@@ -1,0 +1,79 @@
+  
+  First you need to install formik and yup
+  
+  
+  
+    <Formik
+                  initialValues={{
+                    username: "",
+                    password: ""
+                  }}
+                  validationSchema={LoginSchema}
+                  onSubmit={values => {
+                    console.log(values);
+                  }}
+                >
+                  {({ isValid }) => (
+                    <Form autoComplete="off">
+                      <Field
+                        type="text"
+                        valid={isValid}
+                        name="username"
+                        label="User Name"
+                        component={Input}
+                      />
+                      <Field
+                        type="password"
+                        name="password"
+                        label="Password"
+                        valid={isValid}
+                        component={Input}
+                      />
+                      <FormGroup row>
+                        <Col sm={5} className="offset-2">
+                          <button
+                            type="submit"
+                            className="btn btn-sm btn-primary mt-1"
+                          >
+                            Submit
+                          </button>
+                        </Col>
+                      </FormGroup>
+                    </Form>
+                  )}
+                </Formik>
+                
+                
+                
+                
+                
+                import { object, string } from "yup";
+
+                const RegisterSchema = object({
+                  username: string()
+                    .min(4)
+                    .max(10)
+                    .required(),
+                  email: string()
+                    .min(5)
+                    .max(100)
+                    .email()
+                    .required(),
+                  password: string()
+                    .min(6)
+                    .max(50)
+                    .required()
+                });
+
+                const LoginSchema = object({
+                  username: string()
+                    .min(4)
+                    .max(10)
+                    .required(),
+                  password: string()
+                    .min(6)
+                    .max(50)
+                    .required()
+                });
+
+                export { RegisterSchema, LoginSchema };
