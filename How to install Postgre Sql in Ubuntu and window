@@ -1,3 +1,40 @@
-Hello
 
-This is explaination about setup postgre dql in linux
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+sudo -s
+psql
+
+\l
+\du
+CREATE USER postgres_one WITH PASSWORD 'postgres'; 
+
+
+
+
+
+
+ramprit@sahani-ramprit:~$ sudo -s
+[sudo] password for ramprit: 
+root@sahani-ramprit:~# su postgres
+postgres@sahani-ramprit:/home/ramprit$ cd
+postgres@sahani-ramprit:~$ psql
+psql (10.6 (Ubuntu 10.6-0ubuntu0.18.04.1))
+Type "help" for help.
+
+postgres=# \l
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+-----------+----------+----------+---------+-------+-----------------------
+ postgres  | postgres | UTF8     | en_IN   | en_IN | 
+ template0 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_IN   | en_IN | =c/postgres          +
+           |          |          |         |       | postgres=CTc/postgres
+(3 rows)
+
+postgres=# CREATE USER postgres with PASSWORD 'postgres';
+ERROR:  role "postgres" already exists
+postgres=# CREATE USER sahani with PASSWORD 'postgres';
+CREATE ROLE
+postgres=# 
