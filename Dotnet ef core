@@ -4,3 +4,10 @@ EF core migration from Data to Api
 dotnet ef migrations  --startup-project "..\Core" add initial
 
 
+ <ItemGroup>
+      <ProjectReference Include="..\ShoppingData\ShoppingData.csproj" />
+      <ProjectReference Include="..\ShoppingModel\ShoppingModel.csproj" />
+  </ItemGroup>
+  
+  
+
