@@ -1,0 +1,3 @@
+# How to generate ssh key
+ssh-keygen -t rsa -b 4096 -C "Rampritsahani@outlook.in"
+then it will prompt you then enter - 2 time after that you will get ssh key in id_rsa.pub file.
